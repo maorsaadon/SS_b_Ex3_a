@@ -28,28 +28,45 @@ namespace ariel{
 
             // Overloaded operators for arithmetic operations
             Fraction operator+(const Fraction& other) const;
-            // friend Fraction operator+(const double, const Fraction&);
-            // friend Fraction operator+(const Fraction&, const double);
+            friend Fraction operator+(const double num1, const Fraction& num2);
+            friend Fraction operator+(const Fraction& num1, const double num2);
             
             Fraction operator-(const Fraction& other) const;
-            // friend Fraction operator-(const double, const Fraction&);
-            // friend Fraction operator-(const Fraction&, const double);
+            friend Fraction operator-(const double num1, const Fraction& num2);
+            friend Fraction operator-(const Fraction& num1, const double num2);
             
             Fraction operator*(const Fraction& other) const;
-            // friend Fraction operator*(const double, const Fraction&);
-            // friend Fraction operator*(const Fraction&, const double);
+            friend Fraction operator*(const double num1, const Fraction& num2);
+            friend Fraction operator*(const Fraction& num1, const double num2);
             
             Fraction operator/(const Fraction& other) const;
-            // friend Fraction operator/(const double, const Fraction&);
-            // friend Fraction operator/(const Fraction&, const double);
+            friend Fraction operator/(const double num1, const Fraction& num2);
+            friend Fraction operator/(const Fraction& num1, const double num2);
             
             // Overloaded operators for comparison operations
             bool operator==(const Fraction& other) const;
+            friend bool operator==(const double num1, const Fraction& num2);
+            friend bool operator==(const Fraction& num1, const double num2);
+            
             bool operator!=(const Fraction& other) const;
+            friend bool operator!=(const double num1, const Fraction& num2);
+            friend bool operator!=(const Fraction& num1, const double num2);
+            
             bool operator>(const Fraction& other) const;
+            friend bool operator>(const double num1, const Fraction& num2);
+            friend bool operator>(const Fraction& num1, const double num2);
+            
             bool operator<(const Fraction& other) const;
+            friend bool operator<(const double num1, const Fraction& num2);
+            friend bool operator<(const Fraction& num1, const double num2);
+            
             bool operator>=(const Fraction& other) const;
+            friend bool operator>=(const double num1, const Fraction& num2);
+            friend bool operator>=(const Fraction& num1, const double num2);
+            
             bool operator<=(const Fraction& other) const;
+            friend bool operator<=(const double num1, const Fraction& num2);
+            friend bool operator<=(const Fraction& num1, const double num2);
 
             // Overloaded operators for increment and decrement operations
             Fraction operator++(); // pre-increment
@@ -71,16 +88,6 @@ namespace ariel{
             void setNumerator(int numerator);
             void setDenominator(int denominator);
 
-            // Friend functions
-            friend Fraction operator*(double num1, const Fraction& num2);
-            friend Fraction operator+(double num1, const Fraction& num2);
-
-            // New overloaded operator
-            Fraction operator+(double num) const;
-            Fraction operator-(int num) const;
-
-            //Fraction operator-(const int num) const;
-            bool operator>(double num) const;
 
     };
 

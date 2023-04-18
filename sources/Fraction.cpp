@@ -48,6 +48,15 @@ namespace ariel {
         return Fraction(num1 + num2, lcm);
     }
 
+    // Friend function for operator+ with double as the first operand
+    Fraction operator+(double num1, const Fraction& num2) {
+        return Fraction(num1) + num2;
+    }
+
+    Fraction operator+(const Fraction& num1, double num2) {
+        return num1 + Fraction(num2);
+    }
+
     // Overloaded operator for subtraction
     Fraction Fraction::operator-(const Fraction& other) const {
         int lcm = abs(denominator * other.denominator / gcd(denominator, other.denominator));
@@ -56,9 +65,28 @@ namespace ariel {
         return Fraction(num1 - num2, lcm);
     }
 
+    // Friend function for operator- with double as the first operand
+    Fraction operator-(double num1, const Fraction& num2) {
+        return Fraction(num1) - num2;
+    }
+
+    Fraction operator-(const Fraction& num1, double num2) {
+        return num1 - Fraction(num2);
+    }
+
     // Overloaded operator for multiplication
     Fraction Fraction::operator*(const Fraction& other) const {
         return Fraction(numerator * other.numerator, denominator * other.denominator);
+    }
+
+    // Friend function for operator* with double as the first operand
+    Fraction operator*(double num1, const Fraction& num2) {
+        return Fraction(num1) * num2;
+    }
+
+    // Friend function for operator* with double as the first operand
+    Fraction operator*(const Fraction& num1, double num2) {
+        return num1 * Fraction(num2);
     }
 
     // Overloaded operator for division
@@ -69,14 +97,39 @@ namespace ariel {
         return Fraction(numerator * other.denominator, denominator * other.numerator);
     }
 
+    // Friend function for operator+ with double as the first operand
+    Fraction operator/(double num1, const Fraction& num2) {
+        return Fraction(num1) / num2;
+    }
+
+    Fraction operator/(const Fraction& num1, double num2) {
+        return num1 / Fraction(num2);
+    }
+
     // Overloaded operator for equality
     bool Fraction::operator==(const Fraction& other) const {
         return (numerator == other.numerator && denominator == other.denominator);
     }
 
+    bool operator==(double num1, const Fraction& num2) {
+        return Fraction(num1) == num2;
+    }
+
+    bool operator==(const Fraction& num1, double num2) {
+        return num1 == Fraction(num2);
+    }
+
     // Overloaded operator for inequality
     bool Fraction::operator!=(const Fraction& other) const {
         return !(*this == other);
+    }
+
+    bool operator!=(double num1, const Fraction& num2) {
+        return Fraction(num1) != num2;
+    }
+
+    bool operator!=(const Fraction& num1, double num2) {
+        return num1 != Fraction(num2);
     }
 
     // Overloaded operator for greater than
@@ -87,9 +140,25 @@ namespace ariel {
         return num1 > num2;
     }
 
+    bool operator>(double num1, const Fraction& num2) {
+        return Fraction(num1) > num2;
+    }
+
+    bool operator>(const Fraction& num1, double num2) {
+        return num1 > Fraction(num2);
+    }
+
     // Overloaded operator for less than
     bool Fraction::operator<(const Fraction& other) const {
         return !(*this > other || *this == other);
+    }
+
+    bool operator<(double num1, const Fraction& num2) {
+        return Fraction(num1) < num2;
+    }
+
+    bool operator<(const Fraction& num1, double num2) {
+        return num1 < Fraction(num2);
     }
 
     // Overloaded comparison operator >=
@@ -97,9 +166,25 @@ namespace ariel {
         return (numerator * other.denominator) >= (denominator * other.numerator);
     }
 
+    bool operator>=(double num1, const Fraction& num2) {
+        return Fraction(num1) >= num2;
+    }
+
+    bool operator>=(const Fraction& num1, double num2) {
+        return num1 >= Fraction(num2);
+    }
+
     // Overloaded comparison operator <=
     bool Fraction::operator<=(const Fraction& other) const {
         return (numerator * other.denominator) <= (denominator * other.numerator);
+    }
+
+    bool operator<=(double num1, const Fraction& num2) {
+        return Fraction(num1) <= num2;
+    }
+
+    bool operator<=(const Fraction& num1, double num2) {
+        return num1 <= Fraction(num2);
     }
 
     // Overloaded increment operator ++
@@ -180,31 +265,5 @@ namespace ariel {
         this->denominator = denominator;
         reduce();
     }
-
-    // Friend function for operator* with double as the first operand
-    Fraction operator*(double num1, const Fraction& num2) {
-        return Fraction(num1) * num2;
-    }
-
-    // Friend function for operator+ with double as the first operand
-    Fraction operator+(double num1, const Fraction& num2) {
-        return Fraction(num1) + num2;
-    }
-
-    // New overloaded operator +
-    Fraction Fraction::operator+(double num) const {
-        return *this + Fraction(num);
-    }
-
-    // New overloaded operator -
-    Fraction Fraction::operator-(int num) const {
-        return *this - Fraction(num);
-    }
-
-    // Overloaded comparison operator >
-    bool Fraction::operator>(double num) const {
-        return static_cast<double>(*this) > num;
-    }
-
 
 };
