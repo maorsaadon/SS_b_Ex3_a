@@ -20,7 +20,7 @@ namespace ariel{
             Fraction();
             explicit Fraction(int numerator);
             Fraction(int numerator, int denominator);
-            Fraction(double num);
+            Fraction(float num);
             
             // //destructor
             // ~Fraction();
@@ -28,45 +28,45 @@ namespace ariel{
 
             // Overloaded operators for arithmetic operations
             Fraction operator+(const Fraction& other) const;
-            friend Fraction operator+(const double num1, const Fraction& num2);
-            friend Fraction operator+(const Fraction& num1, const double num2);
+            friend Fraction operator+(const float num1, const Fraction& num2);
+            friend Fraction operator+(const Fraction& num1, const float num2);
             
             Fraction operator-(const Fraction& other) const;
-            friend Fraction operator-(const double num1, const Fraction& num2);
-            friend Fraction operator-(const Fraction& num1, const double num2);
+            friend Fraction operator-(const float num1, const Fraction& num2);
+            friend Fraction operator-(const Fraction& num1, const float num2);
             
             Fraction operator*(const Fraction& other) const;
-            friend Fraction operator*(const double num1, const Fraction& num2);
-            friend Fraction operator*(const Fraction& num1, const double num2);
+            friend Fraction operator*(const float num1, const Fraction& num2);
+            friend Fraction operator*(const Fraction& num1, const float num2);
             
             Fraction operator/(const Fraction& other) const;
-            friend Fraction operator/(const double num1, const Fraction& num2);
-            friend Fraction operator/(const Fraction& num1, const double num2);
+            friend Fraction operator/(const float num1, const Fraction& num2);
+            friend Fraction operator/(const Fraction& num1, const float num2);
             
             // Overloaded operators for comparison operations
             bool operator==(const Fraction& other) const;
-            friend bool operator==(const double num1, const Fraction& num2);
-            friend bool operator==(const Fraction& num1, const double num2);
+            friend bool operator==(const float num1, const Fraction& num2);
+            friend bool operator==(const Fraction& num1, const float num2);
             
             bool operator!=(const Fraction& other) const;
-            friend bool operator!=(const double num1, const Fraction& num2);
-            friend bool operator!=(const Fraction& num1, const double num2);
+            friend bool operator!=(const float num1, const Fraction& num2);
+            friend bool operator!=(const Fraction& num1, const float num2);
             
             bool operator>(const Fraction& other) const;
-            friend bool operator>(const double num1, const Fraction& num2);
-            friend bool operator>(const Fraction& num1, const double num2);
+            friend bool operator>(const float num1, const Fraction& num2);
+            friend bool operator>(const Fraction& num1, const float num2);
             
             bool operator<(const Fraction& other) const;
-            friend bool operator<(const double num1, const Fraction& num2);
-            friend bool operator<(const Fraction& num1, const double num2);
+            friend bool operator<(const float num1, const Fraction& num2);
+            friend bool operator<(const Fraction& num1, const float num2);
             
             bool operator>=(const Fraction& other) const;
-            friend bool operator>=(const double num1, const Fraction& num2);
-            friend bool operator>=(const Fraction& num1, const double num2);
+            friend bool operator>=(const float num1, const Fraction& num2);
+            friend bool operator>=(const Fraction& num1, const float num2);
             
             bool operator<=(const Fraction& other) const;
-            friend bool operator<=(const double num1, const Fraction& num2);
-            friend bool operator<=(const Fraction& num1, const double num2);
+            friend bool operator<=(const float num1, const Fraction& num2);
+            friend bool operator<=(const Fraction& num1, const float num2);
 
             // Overloaded operators for increment and decrement operations
             Fraction operator++(); // pre-increment

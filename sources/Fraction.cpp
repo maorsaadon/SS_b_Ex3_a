@@ -20,7 +20,7 @@ namespace ariel {
     }
 
     // Constructor with a double value
-    Fraction::Fraction(double num) : numerator(static_cast<int>(num * 10000)), denominator(10000) {
+    Fraction::Fraction(float num) : numerator(static_cast<int>(num * 10000)), denominator(10000) {
         reduce();
     }
 
@@ -48,12 +48,12 @@ namespace ariel {
         return Fraction(num1 + num2, lcm);
     }
 
-    // Friend function for operator+ with double as the first operand
-    Fraction operator+(double num1, const Fraction& num2) {
+    // Friend function for operator+ with float as the first operand
+    Fraction operator+(float num1, const Fraction& num2) {
         return Fraction(num1) + num2;
     }
 
-    Fraction operator+(const Fraction& num1, double num2) {
+    Fraction operator+(const Fraction& num1, float num2) {
         return num1 + Fraction(num2);
     }
 
@@ -65,12 +65,12 @@ namespace ariel {
         return Fraction(num1 - num2, lcm);
     }
 
-    // Friend function for operator- with double as the first operand
-    Fraction operator-(double num1, const Fraction& num2) {
+    // Friend function for operator- with float as the first operand
+    Fraction operator-(float num1, const Fraction& num2) {
         return Fraction(num1) - num2;
     }
 
-    Fraction operator-(const Fraction& num1, double num2) {
+    Fraction operator-(const Fraction& num1, float num2) {
         return num1 - Fraction(num2);
     }
 
@@ -79,13 +79,13 @@ namespace ariel {
         return Fraction(numerator * other.numerator, denominator * other.denominator);
     }
 
-    // Friend function for operator* with double as the first operand
-    Fraction operator*(double num1, const Fraction& num2) {
+    // Friend function for operator* with float as the first operand
+    Fraction operator*(float num1, const Fraction& num2) {
         return Fraction(num1) * num2;
     }
 
-    // Friend function for operator* with double as the first operand
-    Fraction operator*(const Fraction& num1, double num2) {
+    // Friend function for operator* with float as the first operand
+    Fraction operator*(const Fraction& num1, float num2) {
         return num1 * Fraction(num2);
     }
 
@@ -97,12 +97,12 @@ namespace ariel {
         return Fraction(numerator * other.denominator, denominator * other.numerator);
     }
 
-    // Friend function for operator+ with double as the first operand
-    Fraction operator/(double num1, const Fraction& num2) {
+    // Friend function for operator+ with float as the first operand
+    Fraction operator/(float num1, const Fraction& num2) {
         return Fraction(num1) / num2;
     }
 
-    Fraction operator/(const Fraction& num1, double num2) {
+    Fraction operator/(const Fraction& num1, float num2) {
         return num1 / Fraction(num2);
     }
 
@@ -111,11 +111,11 @@ namespace ariel {
         return (numerator == other.numerator && denominator == other.denominator);
     }
 
-    bool operator==(double num1, const Fraction& num2) {
+    bool operator==(float num1, const Fraction& num2) {
         return Fraction(num1) == num2;
     }
 
-    bool operator==(const Fraction& num1, double num2) {
+    bool operator==(const Fraction& num1, float num2) {
         return num1 == Fraction(num2);
     }
 
@@ -124,11 +124,11 @@ namespace ariel {
         return !(*this == other);
     }
 
-    bool operator!=(double num1, const Fraction& num2) {
+    bool operator!=(float num1, const Fraction& num2) {
         return Fraction(num1) != num2;
     }
 
-    bool operator!=(const Fraction& num1, double num2) {
+    bool operator!=(const Fraction& num1, float num2) {
         return num1 != Fraction(num2);
     }
 
@@ -140,11 +140,11 @@ namespace ariel {
         return num1 > num2;
     }
 
-    bool operator>(double num1, const Fraction& num2) {
+    bool operator>(float num1, const Fraction& num2) {
         return Fraction(num1) > num2;
     }
 
-    bool operator>(const Fraction& num1, double num2) {
+    bool operator>(const Fraction& num1, float num2) {
         return num1 > Fraction(num2);
     }
 
@@ -153,11 +153,11 @@ namespace ariel {
         return !(*this > other || *this == other);
     }
 
-    bool operator<(double num1, const Fraction& num2) {
+    bool operator<(float num1, const Fraction& num2) {
         return Fraction(num1) < num2;
     }
 
-    bool operator<(const Fraction& num1, double num2) {
+    bool operator<(const Fraction& num1, float num2) {
         return num1 < Fraction(num2);
     }
 
@@ -166,11 +166,11 @@ namespace ariel {
         return (numerator * other.denominator) >= (denominator * other.numerator);
     }
 
-    bool operator>=(double num1, const Fraction& num2) {
+    bool operator>=(float num1, const Fraction& num2) {
         return Fraction(num1) >= num2;
     }
 
-    bool operator>=(const Fraction& num1, double num2) {
+    bool operator>=(const Fraction& num1, float num2) {
         return num1 >= Fraction(num2);
     }
 
@@ -179,11 +179,11 @@ namespace ariel {
         return (numerator * other.denominator) <= (denominator * other.numerator);
     }
 
-    bool operator<=(double num1, const Fraction& num2) {
+    bool operator<=(float num1, const Fraction& num2) {
         return Fraction(num1) <= num2;
     }
 
-    bool operator<=(const Fraction& num1, double num2) {
+    bool operator<=(const Fraction& num1, float num2) {
         return num1 <= Fraction(num2);
     }
 
