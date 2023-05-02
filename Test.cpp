@@ -21,6 +21,14 @@ TEST_CASE("Creating Fractions")
     CHECK(f3.getDenominator() == 1);
 }
 
+
+TEST_CASE("Fraction =")
+{
+    Fraction f1(1, 2), f2(2, 3);
+    f1 = f2;
+    CHECK(f1 == f2);
+}
+
 TEST_CASE("Fraction addition")
 {
     Fraction f1(1, 2), f2(2, 3);
