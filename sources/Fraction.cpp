@@ -30,13 +30,14 @@ namespace ariel
         return Fraction(1, 1);
     }
 
-    Fraction Fraction::operator+(const float &other) const
+    // Friend function for operator+ with float as the first operand
+    Fraction operator+(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
-    // Friend function for operator+ with float as the first operand
-    Fraction operator+(const float &num1, const Fraction &num2)
+    // Friend function for operator+ with Fraction as the first operand
+    Fraction operator+(const Fraction &num2, const float &num1)
     {
         return Fraction(1, 1);
     }
@@ -47,13 +48,14 @@ namespace ariel
         return Fraction(1, 1);
     }
 
-    Fraction Fraction::operator-(const float &other) const
+    // Friend function for operator- with float as the first operand
+    Fraction operator-(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
-    // Friend function for operator- with float as the first operand
-    Fraction operator-(const float &num1, const Fraction &num2)
+    // Friend function for operator- with Fraction as the first operand
+    Fraction operator-(const Fraction &num2, const float &num1)
     {
         return Fraction(1, 1);
     }
@@ -64,13 +66,14 @@ namespace ariel
         return Fraction(1, 1);
     }
 
-    Fraction Fraction::operator*(const float &other) const
+    // Friend function for operator* with float as the first operand
+    Fraction operator*(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
-    // Friend function for operator* with float as the first operand
-    Fraction operator*(const float &num1, const Fraction &num2)
+    // Friend function for operator* with Fraction as the first operand
+    Fraction operator*(const Fraction &num2, const float &num1)
     {
         return Fraction(1, 1);
     }
@@ -81,13 +84,14 @@ namespace ariel
         return Fraction(1, 1);
     }
 
-    Fraction Fraction::operator/(const float &other) const
+    // Friend function for operator+ with float as the first operand
+    Fraction operator/(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
-    // Friend function for operator+ with float as the first operand
-    Fraction operator/(const float &num1, const Fraction &num2)
+    // Friend function for operator+ with Fraction as the first operand
+    Fraction operator/(const Fraction &num2, const float &num1)
     {
         return Fraction(1, 1);
     }
@@ -98,12 +102,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator==(const float &other) const
+    bool operator==(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator==(const float &num1, const Fraction &num2)
+    bool operator==(const Fraction &num2, const float &num1)
     {
         return true;
     }
@@ -114,12 +118,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator!=(const float &other) const
+    bool operator!=(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator!=(const float &num1, const Fraction &num2)
+    bool operator!=(const Fraction &num2, const float &num1)
     {
         return true;
     }
@@ -130,12 +134,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator>(const float &other) const
+    bool operator>(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator>(const float &num1, const Fraction &num2)
+    bool operator>(const Fraction &num2, const float &num1)
     {
         return true;
     }
@@ -146,12 +150,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator<(const float &other) const
+    bool operator<(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator<(const float &num1, const Fraction &num2)
+    bool operator<(const Fraction &num2, const float &num1)
     {
         return true;
     }
@@ -162,12 +166,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator>=(const float &other) const
+    bool operator>=(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator>=(const float &num1, const Fraction &num2)
+    bool operator>=(const Fraction &num2, const float &num1)
     {
         return true;
     }
@@ -178,12 +182,12 @@ namespace ariel
         return true;
     }
 
-    bool Fraction::operator<=(const float &other) const
+    bool operator<=(const float &num1, const Fraction &num2)
     {
         return true;
     }
 
-    bool operator<=(const float &num1, const Fraction &num2)
+    bool operator<=(const Fraction &num2, const float &num1)
     {
         return true;
     }

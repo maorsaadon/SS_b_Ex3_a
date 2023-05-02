@@ -115,17 +115,49 @@ TEST_CASE("Test comparison operators")
     CHECK(c >= a);
 }
 
-TEST_CASE("Test increment/decrement operators")
-{
+
+TEST_CASE("Fraction Increment ") {
+    
     Fraction a(1, 2), b(3, 4);
 
     CHECK(a++ == Fraction(1, 2));
     CHECK(a == Fraction(3, 2));
 
+    Fraction f1(4, 5);
+    Fraction f2 = ++f1;
+    Fraction f3(4 , 5);
+    Fraction f4 = f3++;
+    
+    // We check that the value in f1 & f2 increase by 1
+    CHECK(f1.getNumerator() == f2.getNumerator());
+    CHECK(f1.getDenominator() == f2.getDenominator());
+    
+    // We check that the value in f3 increase by 1 but the value in f4 isn't
+    CHECK_FALSE(f3.getNumerator() == f4.getNumerator());
+    CHECK_FALSE(f3.getDenominator() == f4.getDenominator());
+    
+}
+
+TEST_CASE("Fraction decrement") {
+    
+    Fraction a(1, 2), b(3, 4);
+
     CHECK(--a == Fraction(1, 2));
     CHECK(a == Fraction(1, 2));
 
-    CHECK_THROWS(b / 0);
+    Fraction f1(4, 5);
+    Fraction f2 = --f1;
+    Fraction f3(4 , 5);
+    Fraction f4 = f3--;
+    
+    // We check that the value in f1 & f2 increase by 1
+    CHECK(f1.getNumerator() == f2.getNumerator());
+    CHECK(f1.getDenominator() == f2.getDenominator());
+    
+    // We check that the value in f3 increase by 1 but the value in f4 isn't
+    CHECK_FALSE(f3.getNumerator() == f4.getNumerator());
+    CHECK_FALSE(f3.getDenominator() == f4.getDenominator());
+    
 }
 
 
