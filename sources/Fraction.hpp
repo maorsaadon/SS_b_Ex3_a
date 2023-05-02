@@ -30,21 +30,21 @@ namespace ariel
         Fraction(float num);
 
         // Overloaded operators for arithmetic operations
-        const Fraction operator+(const Fraction &other) const;
-        const Fraction operator+(const float &other) const;
-        friend const Fraction operator+(const float &num1, const Fraction &num2);
+        Fraction operator+(const Fraction &other) const;
+        Fraction operator+(const float &other) const;
+        friend Fraction operator+(const float &num1, const Fraction &num2);
 
-        const Fraction operator-(const Fraction &other) const;
-        const Fraction operator-(const float &other) const;
-        friend const Fraction operator-(const float &num1, const Fraction &num2);
+        Fraction operator-(const Fraction &other) const;
+        Fraction operator-(const float &other) const;
+        friend Fraction operator-(const float &num1, const Fraction &num2);
 
-        const Fraction operator*(const Fraction &other) const;
-        const Fraction operator*(const float &other) const;
-        friend const Fraction operator*(const float &num1, const Fraction &num2);
+        Fraction operator*(const Fraction &other) const;
+        Fraction operator*(const float &other) const;
+        friend Fraction operator*(const float &num1, const Fraction &num2);
 
-        const Fraction operator/(const Fraction &other) const;
-        const Fraction operator/(const float &other) const;
-        friend const Fraction operator/(const float &num1, const Fraction &num2);
+        Fraction operator/(const Fraction &other) const;
+        Fraction operator/(const float &other) const;
+        friend Fraction operator/(const float &num1, const Fraction &num2);
 
         // Overloaded operators for comparison operations
         bool operator==(const Fraction &other) const;

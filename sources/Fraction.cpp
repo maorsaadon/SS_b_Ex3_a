@@ -25,69 +25,69 @@ namespace ariel
     void Fraction::reduce() {}
 
     // Overloaded operator for addition
-    const Fraction Fraction::operator+(const Fraction &other) const
+    Fraction Fraction::operator+(const Fraction &other) const
     {
         return Fraction(1, 1);
     }
 
-    const Fraction Fraction::operator+(const float &other) const
+    Fraction Fraction::operator+(const float &other) const
     {
         return Fraction(1, 1);
     }
 
     // Friend function for operator+ with float as the first operand
-    const Fraction operator+(const float &num1, const Fraction &num2)
+    Fraction operator+(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
     // Overloaded operator for subtraction
-    const Fraction Fraction::operator-(const Fraction &other) const
+    Fraction Fraction::operator-(const Fraction &other) const
     {
         return Fraction(1, 1);
     }
 
-    const Fraction Fraction::operator-(const float &other) const
+    Fraction Fraction::operator-(const float &other) const
     {
         return Fraction(1, 1);
     }
 
     // Friend function for operator- with float as the first operand
-    const Fraction operator-(const float &num1, const Fraction &num2)
+    Fraction operator-(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
     // Overloaded operator for multiplication
-    const Fraction Fraction::operator*(const Fraction &other) const
+    Fraction Fraction::operator*(const Fraction &other) const
     {
         return Fraction(1, 1);
     }
 
-    const Fraction Fraction::operator*(const float &other) const
+    Fraction Fraction::operator*(const float &other) const
     {
         return Fraction(1, 1);
     }
 
     // Friend function for operator* with float as the first operand
-    const Fraction operator*(const float &num1, const Fraction &num2)
+    Fraction operator*(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
 
     // Overloaded operator for division
-    const Fraction Fraction::operator/(const Fraction &other) const
+    Fraction Fraction::operator/(const Fraction &other) const
     {
         return Fraction(1, 1);
     }
 
-    const Fraction Fraction::operator/(const float &other) const
+    Fraction Fraction::operator/(const float &other) const
     {
         return Fraction(1, 1);
     }
 
     // Friend function for operator+ with float as the first operand
-    const Fraction operator/(const float &num1, const Fraction &num2)
+    Fraction operator/(const float &num1, const Fraction &num2)
     {
         return Fraction(1, 1);
     }
