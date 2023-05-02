@@ -28,14 +28,6 @@ namespace ariel
         Fraction();
         Fraction(int numerator, int denominator);
         Fraction(float num);
-        Fraction(const Fraction &other);
-        Fraction(Fraction &&other) noexcept;
-
-        // //destructor
-        ~Fraction() = default;
-
-        Fraction &operator=(const Fraction &other);
-        Fraction &operator=(Fraction &&other) noexcept;
 
         // Overloaded operators for arithmetic operations
         const Fraction operator+(const Fraction &other) const;

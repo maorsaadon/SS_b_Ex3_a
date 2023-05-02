@@ -13,101 +13,83 @@ namespace ariel
     Fraction::Fraction(int numerator, int denominator) : numerator(1), denominator(1) {}
 
     // Constructor with a float value
-    Fraction::Fraction(float num) : numerator(1), denominator(1){}
-    
-     //Copy constructor.
-    Fraction::Fraction(const Fraction &other) : numerator(1), denominator(1){}
+    Fraction::Fraction(float num) : numerator(1), denominator(1) {}
 
-   
-     //Move constructor.
-    Fraction::Fraction(Fraction &&other) noexcept : numerator(1), denominator(1){}
-
-      // Helper function to compute the greatest common divisor
+    // Helper function to compute the greatest common divisor
     int Fraction::gcd(int a, int b) const
     {
         return 1;
     }
 
     // Helper function to reduce the fraction
-    void Fraction::reduce(){}
-
-    Fraction &Fraction::operator=(const Fraction &other)
-    {
-        return *this;
-    }
-
-    Fraction &Fraction::operator=(Fraction &&other) noexcept
-    {
-        return *this;
-    }
-
+    void Fraction::reduce() {}
 
     // Overloaded operator for addition
     const Fraction Fraction::operator+(const Fraction &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     const Fraction Fraction::operator+(const float &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Friend function for operator+ with float as the first operand
     const Fraction operator+(const float &num1, const Fraction &num2)
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Overloaded operator for subtraction
     const Fraction Fraction::operator-(const Fraction &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     const Fraction Fraction::operator-(const float &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Friend function for operator- with float as the first operand
     const Fraction operator-(const float &num1, const Fraction &num2)
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Overloaded operator for multiplication
     const Fraction Fraction::operator*(const Fraction &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     const Fraction Fraction::operator*(const float &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Friend function for operator* with float as the first operand
     const Fraction operator*(const float &num1, const Fraction &num2)
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Overloaded operator for division
     const Fraction Fraction::operator/(const Fraction &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     const Fraction Fraction::operator/(const float &other) const
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Friend function for operator+ with float as the first operand
     const Fraction operator/(const float &num1, const Fraction &num2)
     {
-        return Fraction(1,1);
+        return Fraction(1, 1);
     }
 
     // Overloaded operator for equality
@@ -221,13 +203,13 @@ namespace ariel
     // Overloaded decrement operator --
     Fraction Fraction::operator--()
     {
-         return *this;
+        return *this;
     }
 
     // Overloaded decrement operator -- (postfix)
     Fraction Fraction::operator--(int)
     {
-         return *this;
+        return *this;
     }
 
     // Overloaded output operator <<
