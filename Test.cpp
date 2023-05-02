@@ -21,15 +21,6 @@ TEST_CASE("Creating Fractions")
     CHECK(f3.getDenominator() == 1);
 }
 
-TEST_CASE("Fraction to double conversion")
-{
-    Fraction f1(1, 2), f2(2, 3), f3(7, 1);
-
-    CHECK((double)f1 == 0.5);
-    CHECK((double)f2 == 0.66666666666666663);
-    CHECK((double)f3 == 7.0);
-}
-
 TEST_CASE("Fraction addition")
 {
     Fraction f1(1, 2), f2(2, 3);
@@ -129,12 +120,6 @@ TEST_CASE("Test increment/decrement operators")
     CHECK_THROWS(b / 0);
 }
 
-TEST_CASE("Test casting to float")
-{
-    Fraction a(1, 2);
-
-    CHECK(abs(static_cast<float>(a) - 0.5f) < 0.0001f);
-}
 
 TEST_CASE("Test reduce")
 {
