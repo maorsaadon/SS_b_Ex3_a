@@ -24,173 +24,56 @@ namespace ariel
     // Helper function to reduce the fraction
     void Fraction::reduce() {}
 
-    // Overloaded operator for addition
-    Fraction Fraction::operator+(const Fraction &other) const
-    {
+    // Friend function for operator+ 
+    Fraction operator+(const Fraction &num1, const Fraction &num2){
         return Fraction(1, 1);
     }
 
-    // Friend function for operator+ with float as the first operand
-    Fraction operator+(const float &num1, const Fraction &num2)
-    {
+    // Friend function for operator-
+    Fraction operator-(const Fraction &num1, const Fraction &num2){
         return Fraction(1, 1);
     }
 
-    // Friend function for operator+ with Fraction as the first operand
-    Fraction operator+(const Fraction &num2, const float &num1)
-    {
+    // Friend function for operator*
+    Fraction operator*(const Fraction &num1, const Fraction &num2){
         return Fraction(1, 1);
     }
 
-    // Overloaded operator for subtraction
-    Fraction Fraction::operator-(const Fraction &other) const
-    {
+    // Friend function for operator/
+    Fraction operator/(const Fraction &num1, const Fraction &num2){
         return Fraction(1, 1);
     }
 
-    // Friend function for operator- with float as the first operand
-    Fraction operator-(const float &num1, const Fraction &num2)
-    {
-        return Fraction(1, 1);
+    // Friend function for operator==
+    bool operator==(const Fraction &num1, const Fraction &num2){
+        return true;
     }
-
-    // Friend function for operator- with Fraction as the first operand
-    Fraction operator-(const Fraction &num2, const float &num1)
-    {
-        return Fraction(1, 1);
+    
+    // Friend function for operator!=
+    bool operator!=(const Fraction &num1, const Fraction &num2){
+        return true;
     }
-
-    // Overloaded operator for multiplication
-    Fraction Fraction::operator*(const Fraction &other) const
-    {
-        return Fraction(1, 1);
-    }
-
-    // Friend function for operator* with float as the first operand
-    Fraction operator*(const float &num1, const Fraction &num2)
-    {
-        return Fraction(1, 1);
-    }
-
-    // Friend function for operator* with Fraction as the first operand
-    Fraction operator*(const Fraction &num2, const float &num1)
-    {
-        return Fraction(1, 1);
-    }
-
-    // Overloaded operator for division
-    Fraction Fraction::operator/(const Fraction &other) const
-    {
-        return Fraction(1, 1);
-    }
-
-    // Friend function for operator+ with float as the first operand
-    Fraction operator/(const float &num1, const Fraction &num2)
-    {
-        return Fraction(1, 1);
-    }
-
-    // Friend function for operator+ with Fraction as the first operand
-    Fraction operator/(const Fraction &num2, const float &num1)
-    {
-        return Fraction(1, 1);
-    }
-
-    // Overloaded operator for equality
-    bool Fraction::operator==(const Fraction &other) const
-    {
+    
+    // Friend function for operator>
+    bool operator>(const Fraction &num1, const Fraction &num2){
         return true;
     }
 
-    bool operator==(const float &num1, const Fraction &num2)
-    {
+    // Friend function for operator<
+    bool operator<(const Fraction &num1, const Fraction &num2){
         return true;
     }
 
-    bool operator==(const Fraction &num2, const float &num1)
-    {
+    // Friend function for operator>=
+    bool operator>=(const Fraction &num1, const Fraction &num2){
         return true;
     }
 
-    // Overloaded operator for inequality
-    bool Fraction::operator!=(const Fraction &other) const
-    {
+    // Friend function for operator<=
+    bool operator<=(const Fraction &num1, const Fraction &num2){
         return true;
     }
 
-    bool operator!=(const float &num1, const Fraction &num2)
-    {
-        return true;
-    }
-
-    bool operator!=(const Fraction &num2, const float &num1)
-    {
-        return true;
-    }
-
-    // Overloaded operator for greater than
-    bool Fraction::operator>(const Fraction &other) const
-    {
-        return true;
-    }
-
-    bool operator>(const float &num1, const Fraction &num2)
-    {
-        return true;
-    }
-
-    bool operator>(const Fraction &num2, const float &num1)
-    {
-        return true;
-    }
-
-    // Overloaded operator for less than
-    bool Fraction::operator<(const Fraction &other) const
-    {
-        return true;
-    }
-
-    bool operator<(const float &num1, const Fraction &num2)
-    {
-        return true;
-    }
-
-    bool operator<(const Fraction &num2, const float &num1)
-    {
-        return true;
-    }
-
-    // Overloaded comparison operator >=
-    bool Fraction::operator>=(const Fraction &other) const
-    {
-        return true;
-    }
-
-    bool operator>=(const float &num1, const Fraction &num2)
-    {
-        return true;
-    }
-
-    bool operator>=(const Fraction &num2, const float &num1)
-    {
-        return true;
-    }
-
-    // Overloaded comparison operator <=
-    bool Fraction::operator<=(const Fraction &other) const
-    {
-        return true;
-    }
-
-    bool operator<=(const float &num1, const Fraction &num2)
-    {
-        return true;
-    }
-
-    bool operator<=(const Fraction &num2, const float &num1)
-    {
-        return true;
-    }
 
     // Overloaded increment operator ++
     Fraction Fraction::operator++()

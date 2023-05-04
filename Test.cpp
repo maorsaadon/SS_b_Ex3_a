@@ -29,6 +29,16 @@ TEST_CASE("Fraction =")
     CHECK(f1 == f2);
 }
 
+TEST_CASE("Test basic arithmetic operations")
+{
+    Fraction a(1, 2), b(3, 4), c(2, 3);
+
+    CHECK((a + b) == Fraction(5, 4));
+    CHECK((a - b) == Fraction(-1, 4));
+    CHECK((a * b) == Fraction(3, 8));
+    CHECK((a / c) == Fraction(3, 4));
+}
+
 TEST_CASE("Fraction addition")
 {
     Fraction f1(1, 2), f2(2, 3);
@@ -42,15 +52,6 @@ TEST_CASE("Fraction addition")
     CHECK_NOTHROW(b + 2.3);
 }
 
-TEST_CASE("Test basic arithmetic operations")
-{
-    Fraction a(1, 2), b(3, 4), c(2, 3);
-
-    CHECK((a + b) == Fraction(5, 4));
-    CHECK((a - b) == Fraction(-1, 4));
-    CHECK((a * b) == Fraction(3, 8));
-    CHECK((a / c) == Fraction(3, 4));
-}
 
 TEST_CASE("Fraction subtraction")
 {
